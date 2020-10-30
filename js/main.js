@@ -18,3 +18,7 @@
 			$("#header").removeClass("on");
 		}); //addClass-생성/ removerClass-제거
 	});
+	$(document).ready(function(){
+		//상단으로 바로가기 버튼
+		$(".to_top a").smoothScroll();
+	});
