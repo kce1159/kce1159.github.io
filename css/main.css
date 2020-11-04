@@ -64,6 +64,7 @@ header {
 	background-size: 60px 60px !important;
 	background-position: center center !important;
 	text-indent: -9999px;
+	
 	overflow: hidden;
 }
 /* //로고영역 */
