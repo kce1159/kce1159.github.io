@@ -22,11 +22,19 @@
 </style>
 <script>
 $(document).ready(function() {
-	$(".appForm").validate();
+	$(".appForm").validate({
+		rules:{
+			password:"required",
+			password_chk:{
+				equalTo:"#password_lbl"
+			}
+		}
+	});
 	$.extend($.validator.messages, {
 		required: "필수 항목 입니다.",
 		email: "유효하지 않는 Email주소 입니다.",
-		digits: "숫자만 입력 가능합니다."
+		digits: "숫자만 입력 가능합니다.",
+		equalTo: "비밀번호가 일치하지 않습니다."
 	});
 });
 </script>
