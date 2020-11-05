@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<title>스프링</title>
+<title> 스프링 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,46 +14,32 @@
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
 <style>
-/* 사용자 추가 스타일(아래) */
-@media all and (min-width:801px) {
-/* 태블릿용 게시판쓰기영역 */
-.app_list .tit_lbl {
-	width:21%;
-	float:left;
-}
-.app_list .app_content {
-	width:79%;
-	float:right;
-	border:1px solid #ccc;
-}
-.appForm textarea {height:245px;}
-/* //태블릿용 게시판쓰기영역 */
-}
 
-@media all and (min-width:1066px) {
-/* PC용 게시판쓰기영역 */
-
-}
 </style>
+<script>
+$(document).ready(function() {
+	
+});
+</script>
 </head>
 <body>
-<!-- 헤더부터푸터까지 -->
+<!-- 헤더에서푸터까지 -->
 <div id="wrap">
-
-<!-- 헤더상단메뉴로고영역 -->
-<header id="header">
-	<div class="header_area">
-		<!-- 상단로고영역 -->
-		<h1><a href="index.html">스프링 in 자바</a></h1>
-		<!-- //상단로고영역 -->
-		<!-- 상단메뉴영역 -->
-		<p class="openMOgnb"><a href="#"><b class="hdd">메뉴열기</b> <span></span><span></span><span></span></a></p>
-		<div class="header_cont">
+	<!-- 헤더상단메뉴영역영역 -->
+	<header id="header">
+		<div class="header_area box_inner clear">
+			<!-- 상단로고영역 -->
+			<h1><a href="index.html">스프링 in 자바</a></h1>
+			<!-- //상단로고영역 -->
+			
+			<!-- 상단메뉴메뉴영역 -->
+			<p class="openMOgnb"><a href="#"><b class="hdd">메뉴열기</b> <span></span><span></span><span></span></a></p>
+			<div class="header_cont">
 				<ul class="util clear">
 					<li><a href="login.html">로그인</a></li>
 					<li><a href="join.html">회원가입</a></li>
 					<li><a href="mypage.html">마이페이지</a></li>
-				</ul>
+				</ul>	
 				<nav>
 				<ul class="gnb clear">
 					<li><a href="board_list.html" class="openAll1">스프링정보</a>
@@ -93,88 +79,85 @@
                 </nav>
 				<p class="closePop"><a href="javascript:;">닫기</a></p>
 			</div>
-		<!-- //상단메뉴영역 -->
-	</div>
-</header>
-<!-- //헤더상단메뉴로고영역 -->
-
-<!-- 메인콘텐츠영역 -->
-<div id="container">
-	<!-- 메인상단위치표시영역 -->
-	<div class="location_area customer">
-		<div class="box_inner">
-			<h2 class="tit_page">스프링 <span class="in">in</span> 자바</h2>
-			<p class="location">고객센터 <span class="path">/</span> 공지사항</p>
-			<ul class="page_menu clear">
-				<li><a href="#" class="on">공지사항</a></li>
-				<li><a href="#">문의하기</a></li>
-			</ul>
+			<!-- //상단메뉴메뉴영역 -->
 		</div>
-	</div>
-	<!-- //메인상단위치표시영역 -->
+	</header>
+	<!-- //헤더상단메뉴영역영역 -->
+	
+	<!-- 메인콘텐츠영역 -->
+	<div id="container">
+		<!-- 메인상단위치표시영역 -->
+		<div class="location_area customer">
+			<div class="box_inner">
+				<h2 class="tit_page">스프링 <span class="in">in</span> 자바</h2>
+				<p class="location">고객센터 <span class="path">/</span> 공지사항</p>
+				<ul class="page_menu clear">
+					<li><a href="#" class="on">공지사항</a></li>
+					<li><a href="#">문의하기</a></li>
+				</ul>
+			</div>
+		</div>	
+		<!-- //메인상단위치표시영역 -->
 
-	<!-- 메인본문영역 -->
-	<div class="bodytext_area box_inner">
-		<!-- 폼영역 -->
-			<form action="board_write.html" class="appForm">
+		<!-- 메인본문영역 -->
+		<div class="bodytext_area box_inner">
+			<!-- 폼영역 -->
+			<form method="POST" name="board_write" action="board_write.html" class="appForm">
 				<fieldset>
 					<legend>상담문의 입력 양식</legend>
 					<p class="info_pilsoo pilsoo_item">필수입력</p>
 					<ul class="app_list">
 						<li class="clear">
 							<label for="title_lbl" class="tit_lbl pilsoo_item">제목</label>
-							<div class="app_content"><input name="title" required type="text" class="w100p" id="title_lbl" placeholder="제목을 입력해주세요"/></div>
+							<div class="app_content"><input type="text" name="title" class="w100p" id="title_lbl" placeholder="제목을 입력해주세요" required/></div>
 						</li>
 						<li class="clear">
 							<label for="content_lbl" class="tit_lbl pilsoo_item">내용</label>
-							<div class="app_content"><textarea name="content" required id="content_lbl" class="w100p" placeholder="간단한 상담 요청 사항을 남겨주시면 보다 상세한 상담이 가능합니다.
-전화 상담 희망시 기재 부탁드립니다."></textarea></div>
+							<div class="app_content"><textarea name="content" id="content_lbl" class="w100p" placeholder="내용을 입력해주세요." required></textarea></div>
 						</li>
 						<li class="clear">
 							<label for="name_lbl" class="tit_lbl pilsoo_item">작성자명</label>
-							<div class="app_content"><input name="name" required type="text" class="w100p" id="name_lbl" placeholder="이름을 입력해주세요"/></div>
+							<div class="app_content"><input type="text" name="name" class="w100p" id="name_lbl" placeholder="이름을 입력해주세요" required/></div>
 						</li>
 
 					</ul>
 					<p class="btn_line">
 					<button class="btn_baseColor">등록</button>
 					<a href="board_list.html" class="btn_baseColor">목록</a>
-					</p>
+					</p>	
 				</fieldset>
 			</form>
 			<!-- //폼영역 -->
+		</div>
+		<!-- //메인본문영역 -->
 	</div>
-	<!-- //메인본문영역 -->
+	<!-- //메이콘텐츠영역 -->
+	<!-- 푸터메뉴및사업자정보영역 -->
+	<footer>
+		<div class="foot_area box_inner">
+			<ul class="foot_list clear">
+				<li><a href="javascript:;">이용약관</a></li>
+				<li><a href="javascript:;">개인정보취급방침</a></li>
+			</ul>
+			<h2>스프링</h2>
+            <p class="addr">OOOO OOOOO OOOO OOOOOOOOO OOOOO <span class="gubun">/</span>        
+				<span class="br_line">대표전화 <span class="space0">02-1234-5678</span> <span class="gubun">/</span>        
+					<span class="br_line">E-mail : <span class="space0"> admin@OOOO OOOOO.com</span></span>
+				</span>
+			</p>
+			<p class="copy box_inner">Copyright(c) OOOO OOOOO all right reserved</p>
+			<ul class="snslink clear">
+				<li><a href="javascript:;">blog</a></li>
+				<li><a href="javascript:;">facebook</a></li>
+				<li><a href="javascript:;">instargram</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- //푸터메뉴및주소영역 -->
 </div>
-<!-- //메인콘텐츠영역 -->
+<!-- //헤더에서푸터까지 -->
 
-<!-- 푸터사업자정보영역 -->
-<footer id="footer">
-	<div class="foot_area box_inner">
-		<ul class="foot_list clear">
-			<li><a href="javascript:;">이용약관</a></li>
-			<li><a href="javascript:;">개인정보취급방침</a></li>
-		</ul>
-		<h2>스프링</h2>
-           <p class="addr">OOOO OOOOO OOOO OOOOOOOOO OOOOO <span class="gubun">/</span>
-			<span class="br_line">대표전화 <span class="space0">02-1234-5678</span> <span class="gubun">/</span>
-				<span class="br_line">E-mail : <span class="space0"> admin@OOOO OOOOO.com</span></span>
-			</span>
-		</p>
-		<p class="copy box_inner">Copyright(c) OOOO OOOOO all right reserved</p>
-		<ul class="snslink clear">
-			<li><a href="javascript:;">blog</a></li>
-			<li><a href="javascript:;">facebook</a></li>
-			<li><a href="javascript:;">instargram</a></li>
-		</ul>
-	</div>
-</footer>
-<!-- //푸터사업자정보영역 -->
-
-</div>
-<!-- //헤더부터푸터까지 -->
-
-<!-- 퀵메뉴영역 -->
+<!-- 하단퀵메뉴영역 -->
 <h2 class="hdd">빠른 링크 : 전화 문의,카카오톡,오시는 길,꼭대기로</h2>
 <div class="quick_area">
 	<ul class="quick_list">
@@ -184,7 +167,7 @@
 	</ul>
 	<p class="to_top"><a href="#wrap" class="s_point">TOP</a></p>
 </div>
-<!-- //퀵메뉴영역 -->
+<!-- //하단퀵메뉴영역 -->
 
 </body>
 </html>

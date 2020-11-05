@@ -33,11 +33,11 @@ label {vertical-align: middle;}
 .css-checkbox {
 	overflow: hidden;
 	position: absolute;
-	left: -1000px;
+	left: -9999px;
 	width: 1px;
 	height: 1px;
 }
-.css-checkbox + label {
+.agree {
 	display: inline-block;
 	height: 20px;
 	padding-left: 30px !important;
@@ -49,5 +49,8 @@ label {vertical-align: middle;}
 	-moz-user-select: none;
 }
 .css-checkbox:checked + label {
+	background-position: 0 -20px;
+}
+.css-checkbox:checked+label+label{
 	background-position: 0 -20px;
 }
